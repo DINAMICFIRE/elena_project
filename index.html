@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Science Project</title>
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        function showTab(tabId) {
+            const tabs = document.querySelectorAll('.tab-content');
+            tabs.forEach(tab => tab.classList.remove('active'));
+
+            const activeTab = document.getElementById(tabId);
+            activeTab.classList.add('active');
+        }
+    </script>
+</head>
+<body>
+<nav>
+    <a href="#" onclick="showTab('purpose')">Purpose</a>
+    <a href="#" onclick="showTab('work-packets')">Work Packets</a>
+    <a href="#" onclick="showTab('publications')">Publications</a>
+    <a href="about.html">About the Project</a>
+</nav>
+
+<div id="purpose" class="tab-content active">
+    <h1>Purpose</h1>
+    <p>Describe the purpose of your science project here.</p>
+</div>
+
+<div id="work-packets" class="tab-content">
+    <h1>Work Packets</h1>
+    <p>Include details about your work packets here.</p>
+</div>
+
+<div id="publications" class="tab-content">
+    <h1>Publications</h1>
+    <p>List any publications or related resources here.</p>
+</div>
+</body>
+</html>
