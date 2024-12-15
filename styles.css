@@ -1,23 +1,39 @@
+
+/* Enable smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
 body, html {
     margin: 0;
     padding: 0;
     height: 100%;
     font-family: Arial, sans-serif;
+    background-color: #f4f4f4; /* Light background color */
+    color: #333;
+    position: relative; /* To ensure footer works properly */
 }
+
+/* Hero Section */
 .hero {
     display: flex;
     justify-content: center;
-    align-items: flex-start; /* Move the text upwards */
-    height: 80vh; /* Adjust height for better positioning */
+    align-items: center;
+    height: 80vh;
     padding: 20px;
     background-color: #333; /* Dark background color */
     color: white;
     text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Slight shadow for depth */
+    border-radius: 15px; /* Curved edges */
 }
+
 .hero h1 {
-    font-size: 2.5em;
+    font-size: 2.8em;
     margin-bottom: 20px;
+    line-height: 1.3;
 }
+
 .hero p {
     font-size: 1.2em;
     max-width: 800px;
@@ -36,20 +52,119 @@ body, html {
     top: 0;
     width: 100%;
     z-index: 1000;
+    border-radius: 0 0 15px 15px; /* Curved edges on bottom of navbar */
 }
+
 .nav-list li {
     margin: 0 20px;
 }
+
 .nav-list a {
     color: white;
     text-decoration: none;
     font-size: 1.2em;
 }
+
 .nav-list a:hover {
     text-decoration: underline;
 }
 
 /* Content sections */
-.project, .gallery, .work-packages {
-    padding: 80px 20px 20px; /* Added padding to prevent content from being hidden under navbar */
+.content {
+    padding: 100px 20px 100px; /* Adjusted for spacing below navbar */
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    border-radius: 15px; /* Curved edges */
+}
+
+.section-title {
+    font-size: 2em;
+    margin-top: 30px;
+    border-bottom: 2px solid #333;
+    padding-bottom: 5px;
+    color: #0066cc;
+}
+
+.section-content {
+    font-size: 1.1em;
+    line-height: 1.6;
+    margin-top: 15px;
+    color: #444;
+}
+
+ul, ol {
+    font-size: 1.1em;
+    line-height: 1.6;
+    margin-left: 20px;
+}
+
+/* Gallery Grid Layout */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.gallery-item {
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 15px; /* Curved edges */
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.gallery-item p {
+    font-size: 1em;
+    color: #333;
+    margin-top: 10px;
+}
+
+.gallery-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Links */
+.work-package-links a {
+    color: #0066cc;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.work-package-links a:hover {
+    text-decoration: underline;
+}
+
+.footer {
+    position: fixed; /* Fixed position to keep it at the bottom of the screen */
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(51, 51, 51, 0.8); /* Dark background with opacity (80%) */
+    color: white;
+    text-align: center;
+    padding: 20px;
+    font-size: 1.1em;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow above the footer */
+    z-index: 9999; /* Makes sure it's above other content */
+    border-radius: 15px 15px 0 0; /* Curved edges on top of footer */
+}
+
+.footer p {
+    margin: 5px 0;
+}
+
+.footer strong {
+    font-size: 1.2em;
 }
