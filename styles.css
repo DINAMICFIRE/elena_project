@@ -1,27 +1,55 @@
-body {
-    font-family: Arial, sans-serif;
+body, html {
     margin: 0;
     padding: 0;
+    height: 100%;
+    font-family: Arial, sans-serif;
 }
-nav {
-    background-color: #004080;
-    color: white;
+.hero {
     display: flex;
-    justify-content: space-around;
-    padding: 1rem;
+    justify-content: center;
+    align-items: flex-start; /* Move the text upwards */
+    height: 80vh; /* Adjust height for better positioning */
+    padding: 20px;
+    background-color: #333; /* Dark background color */
+    color: white;
+    text-align: center;
 }
-nav a {
+.hero h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+.hero p {
+    font-size: 1.2em;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Navbar */
+.nav-list {
+    display: flex;
+    justify-content: center;
+    background-color: #333;
+    list-style-type: none;
+    margin: 0;
+    padding: 10px 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+.nav-list li {
+    margin: 0 20px;
+}
+.nav-list a {
     color: white;
     text-decoration: none;
-    font-size: 1.2rem;
+    font-size: 1.2em;
 }
-nav a:hover {
+.nav-list a:hover {
     text-decoration: underline;
 }
-.tab-content {
-    display: none;
-    padding: 2rem;
-}
-.tab-content.active {
-    display: block;
+
+/* Content sections */
+.project, .gallery, .work-packages {
+    padding: 80px 20px 20px; /* Added padding to prevent content from being hidden under navbar */
 }

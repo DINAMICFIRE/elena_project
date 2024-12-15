@@ -1,41 +1,269 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="bg">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Science Project</title>
-    <link rel="stylesheet" href="styles.css">
-    <script>
-        function showTab(tabId) {
-            const tabs = document.querySelectorAll('.tab-content');
-            tabs.forEach(tab => tab.classList.remove('active'));
-
-            const activeTab = document.getElementById(tabId);
-            activeTab.classList.add('active');
+    <title>Научно изследване</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4; /* Light background color */
+            color: #333;
         }
-    </script>
+        /* Hero Section */
+        .hero {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 80vh;
+            padding: 20px;
+            background-color: #333; /* Dark background color */
+            color: white;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Slight shadow for depth */
+        }
+        .hero h1 {
+            font-size: 2.8em;
+            margin-bottom: 20px;
+            line-height: 1.3;
+        }
+        .hero p {
+            font-size: 1.2em;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        /* Navbar */
+        .nav-list {
+            display: flex;
+            justify-content: center;
+            background-color: #333;
+            list-style-type: none;
+            margin: 0;
+            padding: 10px 0;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+        .nav-list li {
+            margin: 0 20px;
+        }
+        .nav-list a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.2em;
+        }
+        .nav-list a:hover {
+            text-decoration: underline;
+        }
+
+        /* Content sections */
+        .content {
+            padding: 100px 20px 20px; /* Adjusted for spacing below navbar */
+            background-color: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+            border-radius: 8px;
+        }
+        .section-title {
+            font-size: 2em;
+            margin-top: 30px;
+            border-bottom: 2px solid #333;
+            padding-bottom: 5px;
+            color: #0066cc;
+        }
+        .section-content {
+            font-size: 1.1em;
+            line-height: 1.6;
+            margin-top: 15px;
+            color: #444;
+        }
+        ul, ol {
+            font-size: 1.1em;
+            line-height: 1.6;
+            margin-left: 20px;
+        }
+
+        /* Gallery Grid Layout */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+            padding: 20px;
+            margin-top: 20px;
+        }
+        .gallery-item {
+            background-color: #fff;
+            padding: 10px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .gallery-item img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .gallery-item p {
+            font-size: 1em;
+            color: #333;
+            margin-top: 10px;
+        }
+        .gallery-item:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Links */
+        .work-package-links a {
+            color: #0066cc;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .work-package-links a:hover {
+            text-decoration: underline;
+        }
+
+    </style>
 </head>
 <body>
-<nav>
-    <a href="#" onclick="showTab('purpose')">Purpose</a>
-    <a href="#" onclick="showTab('work-packets')">Work Packets</a>
-    <a href="#" onclick="showTab('publications')">Publications</a>
-    <a href="about.html">About the Project</a>
-</nav>
 
-<div id="purpose" class="tab-content active">
-    <h1>Purpose</h1>
-    <p>Describe the purpose of your science project here.</p>
+<!-- Navbar -->
+<ul class="nav-list">
+    <li><a href="#project">Проект</a></li>
+    <li><a href="#gallery">Галерия</a></li>
+    <li><a href="#work-packages">Работни пакети</a></li>
+</ul>
+
+<!-- Hero Section -->
+<div class="hero">
+    <div>
+        <h1>ВЛИЯНИЕ НА ПОЧВЕНО-КЛИМАТИЧНИТЕ УСЛОВИЯ ВЪРХУ ТЕХНОЛОГИЧНИЯ РЕЖИМ НА НАПОЯВАНЕ И ИЗПИТВАНЕ НА БИОЛОГИЧНИ СРЕДСТВА ЗА КОНТРОЛ НА ФИТОПАТОГЕНИ ПРИ ЯГОДИ ЗА ПОВИШАВАНЕ НА КАЧЕСТВОТО НА ПРОДУКЦИЯТА</h1>
+        <p>БАЗОВА ОРГАНИЗАЦИЯ: ИНСТИТУТ ПО ПОЧВОЗНАНИЕ, АГРОТЕХНОЛОГИИ И ЗАЩИТА НА РАСТЕНИЯТА „НИКОЛА ПУШКАРОВ“</p>
+    </div>
 </div>
 
-<div id="work-packets" class="tab-content">
-    <h1>Work Packets</h1>
-    <p>Include details about your work packets here.</p>
+<!-- Project Section -->
+<div id="project" class="content">
+    <h2 class="section-title">Проект</h2>
+    <p class="section-content">
+        <strong>Заглавие на проекта:</strong> Влияние на почвено-климатичните условия върху технологичния режим на напояване и изпитване на биологични средства за контрол на фитопатогени при ягоди за повишаване на качеството на продукцията.
+    </p>
+    <h3 class="section-title">Базова организация:</h3>
+    <p class="section-content">
+        Институт по почвознание, агротехнологии и защита на растенията „Никола Пушкаров“.
+    </p>
+    <h3 class="section-title">Цели на проекта:</h3>
+    <p class="section-content">
+        Оптимизиране на режима на напояване на белоплодни ягоди в неотопляема полиетиленова тунелна оранжерия, спрямо почвено-климатичните условия. Създаване и изпитване на биологични средства за контрол на фитопатогени при ягоди с цел подобряване на качеството на продукцията.
+    </p>
+    <h3 class="section-title">Фокус на изследванията:</h3>
+    <ul class="section-content">
+        <li>Прецизно напояване и торене въз основа на растежните стадии на културата.</li>
+        <li>Оценка на физични, физикохимични, сензорни и биохимични характеристики на минимално обработен продукт.</li>
+        <li>Анализ на биологични средства за контрол на патогени, използвайки микроорганизми и биологични вещества.</li>
+    </ul>
+    <h3 class="section-title">Основни хипотези:</h3>
+    <ol class="section-content">
+        <li>Водният и хранителният режим значително влияят върху добива, фенологичното развитие и качеството на плодовете.</li>
+        <li>Биологичният контрол е ефективен чрез микроорганизми и природни вещества, намаляващи проявата на вредни симптоми при ягоди.</li>
+    </ol>
+    <h3 class="section-title">Основен принос:</h3>
+    <p class="section-content">
+        Комплексна оценка на влиянието на водния и хранителния режим върху количеството и качеството на плодовете. Идентифициране на растителни екстракти и непатогенни бактериални щамове с потенциал за контрол на фитопатогени при ягоди.
+    </p>
+    <h3 class="section-title">Екологични ползи:</h3>
+    <p class="section-content">
+        Екологично чисто производство чрез биологичен контрол, осигуряващо безопасни продукти без химически съединения, които могат да навредят на човешкия организъм.
+    </p>
 </div>
 
-<div id="publications" class="tab-content">
-    <h1>Publications</h1>
-    <p>List any publications or related resources here.</p>
+<!-- Gallery Section -->
+<div id="gallery" class="content">
+    <h2 class="section-title">Галерия</h2>
+    <p class="section-content">Тук можете да добавите изображения от проекта.</p>
+
+    <!-- Gallery Container -->
+    <div class="gallery-grid">
+        <!-- Image 1 -->
+        <div class="gallery-item">
+            <img src="photos/straw_b_close.png" alt="Изображение 1">
+            <p>Описание на изображение 1</p>
+        </div>
+        <!-- Image 2 -->
+        <div class="gallery-item">
+            <img src="photos/straw_b_far1.png" alt="Изображение 2">
+            <p>Описание на изображение 2</p>
+        </div>
+        <!-- Image 3 -->
+        <div class="gallery-item">
+            <img src="photos/straw_b_far2.png" alt="Изображение 3">
+            <p>Описание на изображение 3</p>
+        </div>
+        <!-- Image 4 -->
+        <div class="gallery-item">
+            <img src="photos/straw_b_field.png" alt="Изображение 4">
+            <p>Описание на изображение 4</p>
+        </div>
+        <!-- Image 5 -->
+        <div class="gallery-item">
+            <img src="photos/straw_b_field_vertical.png" alt="Изображение 5">
+            <p>Описание на изображение 5</p>
+        </div>
+        <!-- Image 6 -->
+        <div class="gallery-item">
+            <img src="photos/straw_b_holes.png" alt="Изображение 6">
+            <p>Описание на изображение 6</p>
+        </div>
+        <!-- Image 7 -->
+        <div class="gallery-item">
+            <img src="photos/straw_b_pack.png" alt="Изображение 7">
+            <p>Описание на изображение 7</p>
+        </div>
+        <!-- Image 8 -->
+        <div class="gallery-item">
+            <img src="photos/straw_b_size.png" alt="Изображение 8">
+            <p>Описание на изображение 8</p>
+        </div>
+        <!-- Image 9 -->
+        <div class="gallery-item">
+            <img src="photos/watering_machine.png" alt="Изображение 9">
+            <p>Описание на изображение 9</p>
+        </div>
+    </div>
 </div>
+
+<!-- Work Packages Section -->
+<div id="work-packages" class="content">
+    <h2 class="section-title">Работни пакети</h2>
+
+    <!-- Work Package 1 -->
+    <h3 class="section-title">Работен пакет 1: „Оптимизиране на технологичния режим на отглеждане спрямо данните от климатично- и почвено-базиран мониторинг“</h3>
+    <p class="section-content">
+        <a href="https://limen-conference.com/wp-content/uploads/2024/10/LIMEN_2023-Proceedings-WEB.pdf" target="_blank">LIMEN 2023 Proceedings - PDF</a><br>
+        <a href="https://jmabonline.com/en/article/NOaAtILAlbXzFqUeLrQF" target="_blank">JMAB Article</a>
+    </p>
+
+    <!-- Work Package 2 -->
+    <h3 class="section-title">Работен пакет 2: „Изпитване на биологични средства за контрол на фитопатогени по ягодата“</h3>
+    <p class="section-content">
+        <a href="https://actamicrobio.bg/archive/issue-3-2024/amb-3-2024-article-10.pdf" target="_blank">Acta Microbiologica - PDF</a>
+    </p>
+
+    <!-- Work Package 3 -->
+    <h3 class="section-title">Работен пакет 3: „Определяне качеството на суровината и съхранение“</h3>
+    <p class="section-content">
+        <a href="https://jmabonline.com/en/article/2PJq7ldE7EzakImATz9h" target="_blank">JMAB Article</a><br>
+        <a href="https://horticulturejournal.usamv.ro/pdf/2024/issue_1/Art58.pdf" target="_blank">Horticulture Journal - PDF</a><br>
+        <a href="https://jmabonline.com/en/article/NOaAtILAlbXzFqUeLrQF" target="_blank">JMAB Article (Repeat)</a>
+    </p>
+</div>
+
 </body>
 </html>
